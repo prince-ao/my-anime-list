@@ -8,6 +8,7 @@ const user_animelist = MAL.user_animelist;
 const forum = MAL.forum;
 const manga = MAL.manga;
 const user_mangalist = MAL.user_mangalist;
+const user = MAL.user;
 
 describe("library", () => {
   describe("anime library", () => {
@@ -174,6 +175,17 @@ describe("library", () => {
           client_id: `${process.env.CLIENT_ID}`,
           user_name: "AnimeLazer",
         }).get_mangalist()();
+        assert(res != undefined);
+      });
+    });
+  });
+  describe("get user information library", () => {
+    describe("get user information", () => {
+      it("should not be undefined", async () => {
+        const res = await user({
+          user_id: "@me",
+          auth_token: `${process.env.AUTH_TOKEN}`,
+        }).get_information()();
         assert(res != undefined);
       });
     });

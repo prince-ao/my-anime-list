@@ -3,6 +3,7 @@ import { user_animelist } from "./lib/user-animelist.js";
 import { forum } from "./lib/forum.js";
 import { manga } from "./lib/manga.js";
 import { user_mangalist } from "./lib/user-mangalist.js";
+import { user } from "./lib/user.js";
 
 export default {
   anime: anime,
@@ -10,4 +11,5 @@ export default {
   forum: forum,
   manga: manga,
   user_mangalist: user_mangalist,
+  user: user,
 };
