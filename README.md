@@ -1,4 +1,4 @@
-<img align="center" src="./assets/MAL.jpg"/>
+<p align="center"><img style="center" src="./assets/MAL.jpg"/></.p>
 
 # myanimelist-api-list
 
@@ -272,7 +272,7 @@ user_mangalist({
   limit?: int,
   offset?: int,
 })
-  .get_mangalist()()
+  .get_mangalist()() => Promise<any>
 ```
 
 <a name="user"></a>
@@ -284,7 +284,7 @@ user({
   auth_token!: string,
   user_id!: "@me",
   fields?: string,
-}).get_information()()
+}).get_information()() => Promise<any>
 ```
 
 <a name="contact"></a>
