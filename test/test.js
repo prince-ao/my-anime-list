@@ -6,6 +6,7 @@ dotenv.config();
 const anime = MAL.anime;
 const user_animelist = MAL.user_animelist;
 const forum = MAL.forum;
+const manga = MAL.manga;
 
 describe("library", () => {
   describe("anime library", () => {
@@ -114,6 +115,35 @@ describe("library", () => {
         const res = await forum({
           client_id: `${process.env.CLIENT_ID}`,
         }).forum_boards()();
+        assert(res != undefined);
+      });
+    });
+  });
+  describe("manga library", () => {
+    describe("get manga list", () => {
+      it("should not be undefined", async () => {
+        const res = await manga({
+          client_id: `${process.env.CLIENT_ID}`,
+          q: "one",
+        }).manga_list()();
+        assert(res != undefined);
+      });
+    });
+    describe("get manga details", () => {
+      it("should not be undefined", async () => {
+        const res = await manga({
+          client_id: `${process.env.CLIENT_ID}`,
+          manga_id: 208,
+        }).manga_details()();
+        assert(res != undefined);
+      });
+    });
+    describe("get manga ranking", () => {
+      it("should not be undefined", async () => {
+        const res = await manga({
+          client_id: `${process.env.CLIENT_ID}`,
+          ranking_type: "all",
+        }).manga_ranking()();
         assert(res != undefined);
       });
     });
