@@ -7,6 +7,7 @@ const anime = MAL.anime;
 const user_animelist = MAL.user_animelist;
 const forum = MAL.forum;
 const manga = MAL.manga;
+const user_mangalist = MAL.user_mangalist;
 
 describe("library", () => {
   describe("anime library", () => {
@@ -78,7 +79,7 @@ describe("library", () => {
         const res = await user_animelist({
           auth_token: `${process.env.AUTH_TOKEN}`,
           anime_id: 17074,
-        }).delete_item()();
+        }).delete_anime_item()();
         assert(res != undefined);
       });
     });
@@ -144,6 +145,35 @@ describe("library", () => {
           client_id: `${process.env.CLIENT_ID}`,
           ranking_type: "all",
         }).manga_ranking()();
+        assert(res != undefined);
+      });
+    });
+  });
+  describe("update user's manga list library", () => {
+    describe("update manga list", () => {
+      it("should not be undefined", async () => {
+        const res = await user_mangalist({
+          auth_token: `${process.env.AUTH_TOKEN}`,
+          manga_id: 208,
+        }).update_mangalist()();
+        assert(res != undefined);
+      });
+    });
+    describe("delete manga list item", () => {
+      it("should not be undefined", async () => {
+        const res = await user_mangalist({
+          auth_token: `${process.env.AUTH_TOKEN}`,
+          manga_id: 208,
+        }).delete_manga_item()();
+        assert(res != undefined);
+      });
+    });
+    describe("get manga list", () => {
+      it("should not be undefined", async () => {
+        const res = await user_mangalist({
+          client_id: `${process.env.CLIENT_ID}`,
+          user_name: "AnimeLazer",
+        }).get_mangalist()();
         assert(res != undefined);
       });
     });
