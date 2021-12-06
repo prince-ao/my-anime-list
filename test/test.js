@@ -5,6 +5,7 @@ dotenv.config();
 
 const anime = MAL.anime;
 const user_animelist = MAL.user_animelist;
+const forum = MAL.forum;
 
 describe("library", () => {
   describe("anime library", () => {
@@ -86,6 +87,33 @@ describe("library", () => {
           client_id: `${process.env.CLIENT_ID}`,
           user_name: "AnimeLazer",
         }).get_animelist()();
+        assert(res != undefined);
+      });
+    });
+  });
+  describe("forum library", () => {
+    describe("get forum boards", () => {
+      it("should not be undefined", async () => {
+        const res = await forum({
+          client_id: `${process.env.CLIENT_ID}`,
+        }).forum_boards()();
+        assert(res != undefined);
+      });
+    });
+    describe("get forum topic detail", () => {
+      it("should not be undefined", async () => {
+        const res = await forum({
+          client_id: `${process.env.CLIENT_ID}`,
+          topic_id: 10,
+        }).forum_boards()();
+        assert(res != undefined);
+      });
+    });
+    describe("get forum topics", () => {
+      it("should not be undefined", async () => {
+        const res = await forum({
+          client_id: `${process.env.CLIENT_ID}`,
+        }).forum_boards()();
         assert(res != undefined);
       });
     });
