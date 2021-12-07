@@ -1,10 +1,14 @@
 {
   "name": "myanimelist-api-wrapper",
-  "version": "1.1.2-a",
+  "version": "1.1.2-b",
   "description": "A simple wrapper around the MAL API hosted on npm.",
-  "main": "dist/bundle.cjs",
+  "main": "dist/bundle_umd.js",
   "scripts": {
     "build": "rollup -c",
+    "build-umd": "rollup index.js --file dist/bundle_umd.js --format umd --name myanimelist-api-wrapper",
+    "build-es": "rollup index.js --file dist/bundle_es.js --format es --name myanimelist-api-wrapper",
+    "build-amd": "rollup index.js --file dist/bundle_amd.js --format amd --name myanimelist-api-wrapper",
+    "build-iife": "rollup index.js --file dist/bundle_iife.js --format iife",
     "test": "mocha --timeout 10000 ./test/test-dist.js"
   },
   "repository": "https://github.com/prince-ao/my-anime-list",

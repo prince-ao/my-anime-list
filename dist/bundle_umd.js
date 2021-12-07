@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('cross-fetch')) :
   typeof define === 'function' && define.amd ? define(['cross-fetch'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global["my-anime-list"] = factory(global.fetch));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global["myanimelist-api-wrapper"] = factory(global.fetch));
 })(this, (function (fetch) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }

@@ -1,4 +1,4 @@
-const MAL = require("../dist/bundle.cjs");
+const MAL = require("../dist/bundle_umd.js");
 const assert = require("assert");
 
 const anime = MAL().anime;

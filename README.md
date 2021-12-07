@@ -6,6 +6,8 @@ This is a simple wrapper around the <a href="https://myanimelist.net/apiconfig/r
 
 Note: It's structured like exactly like the <a href="https://myanimelist.net/apiconfig/references/api/v2">myanimelist API reference</a>, so always refer to it if you have an error. Also, this is under active development, so if there any bugs please email me, or fix it.
 
+Extra Information: There are four types of bundles umd('myanimelist-api-list'), amd('myanimelist-api-list/dist/bundle_amd.js'), iife('myanimelist-api-list/dist/bundle_iife.js'), and es('myanimelist-api-list/dist/bundle_es.js'). By default it uses umd.
+
 Resources:
 
 - [Excellent Blog Post](https://myanimelist.net/blog.php?eid=835707)
