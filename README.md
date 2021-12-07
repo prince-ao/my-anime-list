@@ -4,7 +4,7 @@
 
 This is a simple wrapper around the <a href="https://myanimelist.net/apiconfig/references/authorization">myanimelist API</a> hosted on npm. This library can be used in browsers or node.
 
-Note: It's structured like exactly like the <a href="https://myanimelist.net/apiconfig/references/api/v2">myanimelist API reference</a>, so always refer to it if you have an error. If anything unintended happens please email me, or fix it.
+Note: It's structured like exactly like the <a href="https://myanimelist.net/apiconfig/references/api/v2">myanimelist API reference</a>, so always refer to it if you have an error. Also, this is under active development, so if there any bugs please email me, or fix it.
 
 Resources:
 
