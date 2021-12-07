@@ -9,7 +9,7 @@ export default {
   output: {
     name: "my-anime-list",
     format: "umd",
-    file: "dist/bundle.js",
+    file: "dist/bundle.cjs",
     globals: {
       "cross-fetch": "fetch",
     },
