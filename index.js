@@ -5,11 +5,13 @@ import { manga } from "./lib/manga.js";
 import { user_mangalist } from "./lib/user-mangalist.js";
 import { user } from "./lib/user.js";
 
-export default {
-  anime: anime,
-  user_animelist: user_animelist,
-  forum: forum,
-  manga: manga,
-  user_mangalist: user_mangalist,
-  user: user,
+export default () => {
+  return {
+    anime: anime,
+    user_animelist: user_animelist,
+    forum: forum,
+    manga: manga,
+    user_mangalist: user_mangalist,
+    user: user,
+  };
 };

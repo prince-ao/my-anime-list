@@ -36,7 +36,7 @@ yarn add myanimelist-api-wrapper
 ## Node.js Initialization
 
 ```javascript
-import MAL from "myanimelist-api-wrapper";
+const MAL = require("myanimelist-api-wrapper");
 ```
 
 <a name="usage"></a>
@@ -44,19 +44,19 @@ import MAL from "myanimelist-api-wrapper";
 ## Usage
 
 ```javascript
-const anime = MAL.anime;
-const user_animelist = MAL.user_animelist;
-const forum = MAL.forum;
-const manga = MAL.manga;
-const user_mangalist = MAL.mangalist;
-const user = MAL.user;
+const anime = MAL().anime;
+const user_animelist = MAL().user_animelist;
+const forum = MAL().forum;
+const manga = MAL().manga;
+const user_mangalist = MAL().mangalist;
+const user = MAL().user;
 
 anime({
   client_id: "insert client_id here",
   q: "one",
   limit: 4,
 })
-  .animelist()()
+  .anime_list()()
   .then((data) => console.log(data));
 
 user_animelist({

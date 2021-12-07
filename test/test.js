@@ -1,14 +1,14 @@
-import assert, { doesNotMatch } from "assert";
+import assert from "assert";
 import MAL from "../index.js";
 import dotenv from "dotenv";
 dotenv.config();
 
-const anime = MAL.anime;
-const user_animelist = MAL.user_animelist;
-const forum = MAL.forum;
-const manga = MAL.manga;
-const user_mangalist = MAL.user_mangalist;
-const user = MAL.user;
+const anime = MAL().anime;
+const user_animelist = MAL().user_animelist;
+const forum = MAL().forum;
+const manga = MAL().manga;
+const user_mangalist = MAL().user_mangalist;
+const user = MAL().user;
 
 describe("library", () => {
   describe("anime library", () => {
