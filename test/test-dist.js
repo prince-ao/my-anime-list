@@ -1,4 +1,5 @@
 const MAL = require("../dist/bundle.cjs");
+const assert = require("assert");
 
 const anime = MAL().anime;
 const user_animelist = MAL().user_animelist;
